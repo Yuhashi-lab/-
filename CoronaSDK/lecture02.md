@@ -2,7 +2,7 @@
 
 2016/09/28
 
-スマートフォンアプリのプログラミング㈪
+スマートフォンアプリのプログラミング②
 
 静岡大学情報学部遊橋研究室(yuhashi-lab.net)
 
@@ -16,7 +16,7 @@
 
 GitHubから手に入れたスクロール機能のソース`scroll.lua`を活用します。コーディングは、`main.lua`に対しておこないます。
 
-`scroll.lua`と素材（画像・効果音）は[こちら](https://sites.google.com/site/yuhashilab2/files)からどうぞ（「アプリ開発㈪」のファイルの中にあります）
+`scroll.lua`と素材（画像・効果音）は[こちら](https://sites.google.com/site/yuhashilab2/files)からどうぞ（「アプリ開発②」のファイルの中にあります）
 
 ## 2.1.環境設定
 
@@ -287,6 +287,8 @@ local function onJump(event)
 end
 
 Jump:addEventListener("touch",onJump)
+
+```
 
 ## 4.課題
 ゲームを発展したものを自分で考えて作ってみよう
