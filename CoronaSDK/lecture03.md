@@ -7,7 +7,7 @@
 静岡大学情報学部遊橋研究室(yuhashi-lab.net)
 
 
-1．プログラミング
+##1．プログラミング
 物理演算と加速度センサーを利用したアプリケーションをプログラミングします。
 	
 ##○環境設定
@@ -25,8 +25,8 @@ local walls = {
 	display.newRect(_W -3, _H/2, 6, _H),
 	display.newRect(_W/2, _H -3, _W, 6)
 }
-```
 ↑画面外周に壁を設置
+```
 
 
 ##○オブジェクトの表示
@@ -48,8 +48,8 @@ for i=1, 4, 1 do
 	walls[i]:setFillColor(0.5, 0.3, 0.1)
 	physics.addBody( walls[i], "static", {} )
 end
-```
 ↑画面の外周壁への着色と物理属性付与
+```
 
 ①物理属性とはその位置に物がある状態
 ②[kinematic]は、オブジェクトが重力の影響を受けて落下しないようにその場に止めるもの
@@ -96,17 +96,19 @@ End
 Runtime:addEventListener( "accelerometer", onAccelerometer )
 ```
 
-2．スマホへの実装
-2．１．アプリのビルド
+##2．スマホへの実装
+
+##2．１．アプリのビルド
 　Corona Simulatorを立ち上げ、[File → Build → Android]を選択します。もし、Java Deveropment Kit（JDK）が存在しないと警告されたら、先にJDKをインストールします（ガイダンスに従ってインストール）。
 
  
 
-2．2．アプリの実機転送
+##2．2．アプリの実機転送
 Android端末へアプリ転送する最も簡単な方法は、メール添付での送信です。メールで添付されてきたアプリをインストールするためには、Android端末のセキュリティ設定で提供元不明アプリケーションのインストールを許可しておく必要があります。
 
-3．参考ソースコード（main.lua）
-
+##3．参考ソースコード
+___main.lua:___
+```lua
 local physics = require("physics")
 physics.start()
 
@@ -164,5 +166,6 @@ local function onAccelerometer( event )
 end
 
 Runtime:addEventListener( "accelerometer", onAccelerometer )
+```
 
 以上
