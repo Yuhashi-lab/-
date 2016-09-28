@@ -1,6 +1,10 @@
-2015.10.27
+![yuhashi-lab](http://www.yuhashi-lab.net/_/rsrc/1436515256182/config/customLogo.gif?revision=1)
+
+2016/09/28
+
 スマートフォンアプリのプログラミング③
-静岡大学・遊橋研究室
+
+静岡大学情報学部遊橋研究室(yuhashi-lab.net)
 
 
 1．プログラミング
