@@ -7,20 +7,21 @@
 静岡大学情報学部遊橋研究室(yuhashi-lab.net)
 
 
-##1．サンプルの紹介
+## 1.サンプルの紹介
 サンプルコード
 Corona Labs\Corona SDK\Sample Code\Interface\MapView
 サンプル
 Corona Simulator ⇒ Samples ⇒ Interface ⇒ MapView
 
-※１：上記を参照していただければネイティブ機能の利用によるマップの表示を理解できるかと思います。
-※２：今回は上記のサンプルを若干改変したものを使用し、マップの表示のみ＋αを紹介します。
-※３：シミュレータはマップ表示に対応していないため、実際の仕様確認はAndroid端末を用意して行ってください。
+* １：上記を参照していただければネイティブ機能の利用によるマップの表示を理解できるかと思います。
+* ２：今回は上記のサンプルを若干改変したものを使用し、マップの表示のみ＋αを紹介します。
+* ３：シミュレータはマップ表示に対応していないため、実際の仕様確認はAndroid端末を用意して行ってください。
 
 
-##2．プログラミング（端末のネイティブ機能の利用－マップの表示－）
+## 2.プログラミング（端末のネイティブ機能の利用－マップの表示－）
 
 ### ライブラリ宣言
+
 ___main.lua:___
 ```lua
 -- Your code here
@@ -46,8 +47,8 @@ shadow.anchorX = 0
 shadow.anchorY = 0
 shadow:setFillColor( 0, 0, 0, 120/255 )
 
-○上記ではアンカーの値を0とすることでオブジェクトの左端を原点にしている。
-○本来のアンカーの値は0.5でオブジェクトの中心が原点となっており、1の場合は右端となる。
+* 上記ではアンカーの値を0とすることでオブジェクトの左端を原点にしている。
+* 本来のアンカーの値は0.5でオブジェクトの中心が原点となっており、1の場合は右端となる。
 
 ### マップの下部テキストの作成（シュミレータなど、マップを表示できないときに可視化されるテキスト）
 ___main.lua:___
@@ -128,7 +129,7 @@ inputField.text = "Hyogo Prefecture, Akashi, the National Astronomical Observato
 inputField:setTextColor( 45/255, 45/255, 45/255 )
 
 
-##3．サンプル
+## 1.サンプル
 
 -- Your code here
 
@@ -183,7 +184,7 @@ inputField.text = "Hyogo Prefecture, Akashi, the National Astronomical Observato
 inputField:setTextColor( 45/255, 45/255, 45/255 )
 
 
-##4．参考
+## 4.参考
 冒頭でも紹介していますが、
 Corona起動時の右メニューのSamplesにサンプルがあります。
 また Corona Labs\Corona SDK\Sample Code\Interface\MapView にもサンプルがあります。
