@@ -8,26 +8,25 @@
 
 
 ## 1.サンプルの紹介
-サンプルコード
-Corona Labs\Corona SDK\Sample Code\Interface\MapView
-サンプル
-Corona Simulator ⇒ Samples ⇒ Interface ⇒ MapView
 
-* １：上記を参照していただければネイティブ機能の利用によるマップの表示を理解できるかと思います。
-* ２：今回は上記のサンプルを若干改変したものを使用し、マップの表示のみ＋αを紹介します。
-* ３：シミュレータはマップ表示に対応していないため、実際の仕様確認はAndroid端末を用意して行ってください。
+* Corona Labs⇒Corona SDK⇒Sample Code⇒Interface⇒MapView
+* Corona Simulator ⇒ Samples ⇒ Interface ⇒ MapView
 
+※１：上記を参照していただければネイティブ機能の利用によるマップの表示を理解できるかと思います。
+※２：今回は上記のサンプルを若干改変したものを使用し、マップの表示のみ＋αを紹介します。
+※３：シミュレータはマップ表示に対応していないため、実際の仕様確認はAndroid端末を用意して行ってください。
 
 ## 2.プログラミング（端末のネイティブ機能の利用－マップの表示－）
 
 ### ライブラリ宣言
-
 ___main.lua:___
 ```lua
 -- Your code here
 
 -- ライブラリの利用
 local widget = require( "widget" )
+
+```
 
 ### 背景の設定
 ___main.lua:___
@@ -47,6 +46,8 @@ shadow.anchorX = 0
 shadow.anchorY = 0
 shadow:setFillColor( 0, 0, 0, 120/255 )
 
+```
+
 * 上記ではアンカーの値を0とすることでオブジェクトの左端を原点にしている。
 * 本来のアンカーの値は0.5でオブジェクトの中心が原点となっており、1の場合は右端となる。
 
@@ -64,6 +65,7 @@ local label = display.newText( simulatorMessage, 20, 70, shadow.contentWidth - 1
 label.anchorX = 0
 label.anchorY = 0
 
+```
 
 ### マップの作成
 ___main.lua:___
@@ -83,6 +85,8 @@ if myMap then
 
 	-- マップの中心(緯度，経度)を設定
 	myMap:setCenter( 34.649395, 134.9992893 )
+
+```
 
 * 通常の地図(normal)以外にも航空地図(satellite)や複数種を合成した地図(hybrid)もある。
 
@@ -104,6 +108,8 @@ print( "The tapped location is at: " .. event.latitude .. ", " .. event.longitud
 	myMap:addMarker( event.latitude, event.longitude, options )
 end
 end
+
+```
 
 ### テキストボックス設定
 ___main.lua:___
@@ -128,9 +134,12 @@ inputField.font = native.newFont( native.systemFont, 16 )
 inputField.text = "Hyogo Prefecture, Akashi, the National Astronomical Observatory" -- example of searchable location
 inputField:setTextColor( 45/255, 45/255, 45/255 )
 
+```
 
-## 1.サンプル
+### サンプルソース
 
+___main.lua:___
+```lua
 -- Your code here
 
 local widget = require( "widget" )
@@ -183,6 +192,7 @@ inputField.font = native.newFont( native.systemFont, 16 )
 inputField.text = "Hyogo Prefecture, Akashi, the National Astronomical Observatory" -- example of searchable location
 inputField:setTextColor( 45/255, 45/255, 45/255 )
 
+```
 
 ## 4.参考
 冒頭でも紹介していますが、
