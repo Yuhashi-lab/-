@@ -1,6 +1,4 @@
-![yuhashi-lab](http://www.yuhashi-
-
-lab.net/_/rsrc/1436515256182/config/customLogo.gif?revision=1)
+![yuhashi-lab](http://www.yuhashi-lab.net/_/rsrc/1436515256182/config/customLogo.gif?revision=1)
 
 2016/10/04
 
