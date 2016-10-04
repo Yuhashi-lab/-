@@ -40,25 +40,25 @@ timer.performWithDelay(2000, closeSplash)
 
 ##画面遷移（基礎編）
 ```lua
+--composerという画面遷移ライブラリを使用する
 local composer = require("composer")
+--新しいシーンを作成する
 local scene = composer.newScene()
 
---storyboardのcreateSceneに相当
---シーンのビューが存在しない場合に呼ばれる。
+--シーンが作られた際に呼び出される関数
 function scene:create(event)
 	local sceneGroup = self.view
 end
 
+--シーンが表示されたときに呼び出される関数
 function scene:show(event)
 	local sceneGroup = self.view
 	local phase = event.phase
 
-	--storyboardのwillEnterSceneに相当
 	--シーンがアクティブになる前に呼ばれる。
 	--遷移エフェクトがある場合はそれの前。
 	if(phase == "will") then
 
-	--storyboardのenterSceneに相当
 	--シーンがアクティブになった時に呼ばれる。
 	--遷移エフェクトがある場合はそれの後。
 	elseif(phase == "did") then
@@ -66,16 +66,15 @@ function scene:show(event)
 	end
 end
 
+--シーンの表示が終わった際に呼び出される関数
 function scene:hide(event)
 	local sceneGroup = self.view
 	local phase = event.phase
 
-	--storyboardのexitSceneに相当
 	--シーンが非アクティブになる前に呼ばれる。
 	--遷移エフェクトがある場合はそれの前。
 	if(phase == "will") then
 
-	--storyboardのdidExitSceneに相当
 	--シーンが非アクティブになった時に呼ばれる。
 	--遷移エフェクトがある場合はそれの後。
 	elseif(phase == "did") then
@@ -83,12 +82,12 @@ function scene:hide(event)
 	end
 end
 
---storyboardのdestroySceneに相当
---シーンのビューが削除される前に呼ばれる。
+--シーンが破棄される際に呼び出される関数
 function scene:destroy(event)
 	local sceneGroup = self.view
 end
 
+-- リスナーとしてそれぞれのイベントをシーンに登録
 scene:addEventListener("create", scene)
 scene:addEventListener("show", scene)
 scene:addEventListener("hide", scene)
