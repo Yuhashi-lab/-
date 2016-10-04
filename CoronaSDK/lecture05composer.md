@@ -55,12 +55,12 @@ function scene:show(event)
 	local sceneGroup = self.view
 	local phase = event.phase
 
-	--シーンがアクティブになる前に呼ばれる。
-	--遷移エフェクトがある場合はそれの前。
+	--シーンが動く前に呼ばれる。
+	--遷移エフェクトがある場合はその前。
 	if(phase == "will") then
 
-	--シーンがアクティブになった時に呼ばれる。
-	--遷移エフェクトがある場合はそれの後。
+	--シーンが動いている状態になった時に呼ばれる。
+	--遷移エフェクトがある場合はその後。
 	elseif(phase == "did") then
 
 	end
@@ -71,12 +71,12 @@ function scene:hide(event)
 	local sceneGroup = self.view
 	local phase = event.phase
 
-	--シーンが非アクティブになる前に呼ばれる。
-	--遷移エフェクトがある場合はそれの前。
+	--シーンが動かなくなる前に呼ばれる。
+	--遷移エフェクトがある場合はその前。
 	if(phase == "will") then
 
-	--シーンが非アクティブになった時に呼ばれる。
-	--遷移エフェクトがある場合はそれの後。
+	--シーンが動かなくなった時に呼ばれる。
+	--遷移エフェクトがある場合はその後。
 	elseif(phase == "did") then
 
 	end
