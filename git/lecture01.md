@@ -36,8 +36,8 @@ gitには__ローカルリポジトリ__と__リモートリポジトリ__があ
 https://git-for-windows.github.io/
 
 インストール後は動作確認も兼ねてconfigを設定しておいてください。  
-`>git config -g user.name "自分の名前"`  
-`>git config -g user.email 自分のメールアドレス`  
+`>git config --global user.email 自分のメールアドレス`  
+`>git config --global user.name "自分の名前"`  
 
 ## 2.gitで管理するプロジェクトを作成
 まずはプロジェクトを作ります。  
